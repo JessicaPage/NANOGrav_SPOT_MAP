@@ -15,9 +15,9 @@ I have the google maps api key stored locally . We can just replace that variabl
 
 ALTERNATIVELY, 
 
-If you know php, I've included an example of how the varying radius was implemented in the given map example. 
-I'm not sure how to use it or how to import the data in this language. It creates a kml file (similar to xml) that can be simply uploaded to 
-a google map.
+If you know php, I've included an example in 'Generate_KML_USE_PHP' 
+of how the varying radius was implemented in the given map example. 
+I'm not sure how to use it or how to import the data in this language. It creates a kml file (similar to xml) that can be simply uploaded to a google map.
 
 Here's what I manually made in google maps that does not vary the circle radius, but includes the NANOGrav institutions. 
 https://drive.google.com/open?id=17TA2ZQHsYLSJNLbOYb0e9hgUAt4&usp=sharing

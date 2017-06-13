@@ -1,6 +1,7 @@
 # NANOGrav_SPOT_MAP
 
-The google map included here is an example of what we're trying to do. 
+The google map shown here: https://www.google.com/maps/d/u/0/viewer?mid=1U2eLXZ1GaEbHE5q_BGlJsoYeo_Q&ll=31.10647602832346%2C-100.28084975000002&z=4  
+is an example of what we're trying to do. 
 We want a circular placemarker for each location where a presentation was given, 
 with the radius corresponding to how many students were reached at that location.
 

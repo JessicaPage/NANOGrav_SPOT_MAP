@@ -1,0 +1,53 @@
+s a function that makes a 12-sided polygon on the Earth
+
+function poly($lon, $lat, $size) {
+    $nside = 12;
+    $latrad = $lat*3.14159265/180.;
+    $lonsize = $size/cos($latrad);
+    $s = '';
+    for ($i=0; $i<$nside; $i++) {
+        $th = $i*2*3.14159265/$nside;
+        $lo = $lon + $lonsize*cos($th);
+        $la = $lat +    $size*sin($th);
+        $s .= "".$lo.','.$la.",100
+";
+    }
+    $lo = $lon + $lonsize;
+    $la = $lat;
+    $s .= "".$lo.','.$la.",100
+";
+    return $s;
+}
+
+This is the example output
+-99.352307506177,32.4711,100
+-99.399947866848,32.621099999845,100
+-99.53010375272,32.730907620956,100
+-99.707899999362,32.7711,100
+-99.885696246174,32.730907621494,100
+-100.01585213251,32.621100000777,100
+-100.06349249382,32.471100001077,100
+-100.01585213379,32.321100001088,100
+-99.885696248385,32.211292379583,100
+-99.707900001915,32.1711,100
+-99.530103754931,32.211292377967,100
+-99.399947868125,32.32109999829,100
+-99.352307506177,32.4711,100
+
+=======================================
+And now here is the code that handles each LSC institution and generates two placemarks, one with the name and pushpin, the other with the orange disk whose area is the number of people:
+
+    while ($row = $result->fetch_assoc()) {
+
+        print '<Placemark><name>'.$row['as_screen_name'].'</name><Point><coordinates>'.$row['as_longitude'].','.$row['as_latitude'].'</coordinates></Point></Placemark>
+';
+
+        print "<Placemark> <Polygon> <outerBoundaryIs>  <LinearRing> <coordinates>
+";
+        print poly(0.0+($row['as_longitude']), 0.0+($row['as_latitude']), sqrt(0.0+($row['n']))*0.3);
+        print "</coordinates> </LinearRing> </outerBoundaryIs> </Polygon>";
+        print "<Style> <PolyStyle>  <color>#a01478FF</color> <outline>0</outline> </PolyStyle> </Style>";
+        print "</Placemark>
+";
+    }
+

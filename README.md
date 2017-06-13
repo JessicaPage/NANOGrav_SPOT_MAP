@@ -5,7 +5,7 @@ is an example of what we're trying to do.
 We want a circular placemarker for each location where a presentation was given, 
 with the radius corresponding to how many students were reached at that location.
 
-Circles.html is the progress made so far. It is not even close to correct. 
+Circles.html is the progress made so far. It's not correct. 
 
 locations.csv is the data, with 'mag' being the number of people reached for that location.
 
@@ -20,10 +20,10 @@ I'm not sure how to use it or how to import the data in this language. It create
 a google map.
 
 Here's what I manually made in google maps that does not vary the circle radius, but includes the NANOGrav institutions. 
-https://www.google.com/maps/d/edit?mid=17TA2ZQHsYLSJNLbOYb0e9hgUAt4&ll=14.892277280221354%2C-100.39199239999994&z=3
+https://drive.google.com/open?id=17TA2ZQHsYLSJNLbOYb0e9hgUAt4&usp=sharing
 The kml file generated from that can be downloaded there
 
 We would eventually want to update the map every time we have a new presentation, 
 but the map generation should be enough for now.
 
-If there's any confusion my email is jp0089@uah.edu
+If there's any confusion my email is jp0089@uah.edu. Thanks!
